@@ -1,0 +1,14 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+- test-fluxo-pf-server.yaml
+- test-fluxo-pf-server-ingress.yaml
+- test-fluxo-pf-server-service.yaml
+images:
+- name: 936675601706.dkr.ecr.us-east-2.amazonaws.com/fluxo-pf-server
+  newName: 936675601706.dkr.ecr.us-east-2.amazonaws.com/fluxo-pf-server
+  newTag: 4823ed8
+- name: test-fluxo-pf-server
+  newName: 936675601706.dkr.ecr.us-east-2.amazonaws.com/fluxo-pf-server
+  newTag: 6a0e97b
